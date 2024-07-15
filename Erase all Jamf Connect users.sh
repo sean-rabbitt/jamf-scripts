@@ -31,7 +31,7 @@
 # SOFTWARE.
 
 #Define location of the Jamf binary
-$JAMF_BINARY=$(which jamf)
+JAMF_BINARY=$(which jamf)
 
 # For all users who have a password on this machine (eliminates service accounts
 # but includes the _mbsetupuser and Jamf management accounts...)
