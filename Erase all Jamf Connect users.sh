@@ -67,10 +67,10 @@ for user in $(/usr/bin/dscl . list /Users Password | /usr/bin/awk '$2 != "*" {pr
 		#/usr/bin/dscl . -delete /Users/{$user}
 		#rm -rf /Users{$user}
 		# But you do you, my friend.  Do whatever you want to nuke that data.
-		
-		# Reset secureTokenStatus for next loop.
-		$secureTokenStatus = ""
 		fi
+	# Reset secureTokenStatus for next loop.
+	$secureTokenStatus = ""
+		
 	fi
 done
 
