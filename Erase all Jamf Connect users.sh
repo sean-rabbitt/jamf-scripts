@@ -30,6 +30,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+#Define location of the Jamf binary
+$JAMF_BINARY=$(which jamf)
 
 # For all users who have a password on this machine (eliminates service accounts
 # but includes the _mbsetupuser and Jamf management accounts...)
@@ -69,7 +71,7 @@ for user in $(/usr/bin/dscl . list /Users Password | /usr/bin/awk '$2 != "*" {pr
 		# But you do you, my friend.  Do whatever you want to nuke that data.
 		fi
 	# Reset secureTokenStatus for next loop.
-	$secureTokenStatus = ""
+	secureTokenStatus = ""
 		
 	fi
 done
